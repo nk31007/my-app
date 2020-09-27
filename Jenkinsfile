@@ -44,7 +44,7 @@ stages {
           message "Should I Deploy to Testing"
                ok "Deploy"
           parameters{
-                     choice(name:'ENV' choices:["PROD","DEV","QA"], description: "This is multiple choice based")
+                     choice(name:'ENV', choices:["PROD","DEV","QA"], description: "This is multiple choice based")
                     }
          }
     agent { label 'redhat'}
