@@ -44,7 +44,7 @@ sh 'docker push i633184/my-app:$BUILD_ID'
 agent { label 'redhat'}
 steps{
 script{
-sh '''final_tag=$(echo ${env.Docker_tag}|tr -d '')
+sh '''final_tag="${BUILD_ID}"
 echo ${final_tag}test
 sed -i "s/docker_tag/$final_tag/g" deployment.yml
 '''
