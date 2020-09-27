@@ -1,5 +1,5 @@
 FROM tomcat
 WORKDIR /webapps
-copy target/my-app-1.0-SNAPSHOT.jar .
-RUN rm -rf ROOT && mv my-app-1.0-SNAPSHOT.jar ROOT.war
+copy target/my-app.war .
+RUN rm -rf ROOT && mv my-app.war ROOT.war
 ENTRYPOINT ["sh","/usr/local/tomcat/bin/startup.sh"]

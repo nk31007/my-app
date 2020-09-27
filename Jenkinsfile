@@ -46,7 +46,7 @@ steps{
 script{
 sh '''final_tag=$(echo ${env.Docker_tag}|tr -d '')
 echo ${final_tag}test
-sed -i "s/Docker_tag/$final_tag/g" deployment.yml
+sed -i "s/docker_tag/$final_tag/g" deployment.yml
 '''
 ansiblePlaybook installation: 'ansible', inventory: 'hosts', playbook: 'ansible.yml'
 }
