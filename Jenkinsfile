@@ -39,7 +39,7 @@ stages {
      }
     }
   stage("ansible-playbookk"){
-    options{ timepout(time:30, unit:'MINUTES')}
+    options{ timeout(time:30, unit:'MINUTES')}
     input{ 
           message "Should I Deploy to Testing"
                ok "Deploy"
